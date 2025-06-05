@@ -9,6 +9,13 @@ El teammadaura es un grupo  de jóvenes que esta fabricando un vehículo para la
 
 Es util ya que nos permite participar en la categoria futuros ingenieros en la competencia WRO 2025, tambien nos permite desarrollar nuestras habilidades como ingenieros y programadores.
 
-Cómo pueden comenzar los usuarios con el proyecto.
-Dónde pueden recibir ayuda los usuarios con tu proyecto
-Quién mantiene y contribuye con el proyecto.
+¿Cómo comenzaron los usuarios con el proyecto?
+Comenzamos armando las partes principales del carro como las que pueden ser los motores, ruedas, direccionales, plataformas utilizando el kit de robotica que nos proporciono nuestra institucion llamado olibot. Al terminar de ensamblar empezamos una busqueda de componentes que nos puedan ayudar a nuestro carro como los que pueden ser el puente h l298n, sensores de ultrasonido, arduino y un sensor de color TCS3200 que actualmente no estamos usando por las constantes fallas en su deteccion de color. 
+
+¿Dónde pueden recibir ayuda los usuarios con el proyecto?
+
+Podemos recibir ayuda de los docentes y personal del colegio U.E.P San Agustin, o de los representantes de los estudiantes del club de robotica
+
+¿Quién mantiene y contribuye con el proyecto?
+
+En el proyecto contribuyen los docentes y estudiantes de U.E.P San Agustin, junto con la ayuda de ciertos representantes profesionales en el area de robotica como por ejemplo, el Padre de Samuel Tua
