@@ -4,7 +4,7 @@ El teammadaura es un grupo  de jóvenes que esta fabricando un vehículo para la
 
  Es un vehiculo que cumple las funciones de avanzar hacia adelante, detenerse, avanzar hacia atras, el vehiculo puede girar a la izquierda, y tambien puede girar a la derecha. A futuro tenemos planeado la implementacion de modulo de camara junto a la tarjeta de desarrollo ESP32. La camara la usaremos para detectar los pilares de color verde y rojo, y asi poder esquibarlos.
 
-Le añadimos 3 sensores de sonido a los costados y al frente del carro con piezas fabricadas con BBC, sustituimos el chasis del carro de plastico a uno de aluminio porque el chasis anterior se estaba doblando a medida que el carro se usaba para pruebas, con el nuevo chasis el carro se hizo ligeramente mas largo y le implementamos al carro un pulsador que actue como boton de arranque.
+Le añadimos 3 sensores de sonido a los costados y al frente del carro con piezas fabricadas con PVC, sustituimos el chasis del carro de plastico a uno de aluminio porque el chasis anterior se estaba doblando a medida que el carro se usaba para pruebas, con el nuevo chasis el carro se hizo ligeramente mas largo y le implementamos al carro un pulsador que actue como boton de arranque.
 
 
 2.¿Por qué el proyecto es útil?
