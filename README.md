@@ -1,18 +1,17 @@
 # Madaura
-El teammadaura es un grupo  de jóvenes que esta fabricando un vehículo para la competencia de futuros ingenieros en la WRO 2025. El equipo esta conformado por dos jóvenes de 8vo grado y un joven de 9no grado
-1.¿Qué hace el proyecto?
+El team Madaura es un grupo de jóvenes que está fabricando un vehículo para  competir en la categoría futuros ingenieros en la WRO 2025. El equipo esta conformado por dos jóvenes de 8vo grado y un joven de 9no grado
 
- Es un vehiculo que cumple las funciones de avanzar hacia adelante, detenerse, avanzar hacia atras, el vehiculo puede girar a la izquierda, y tambien puede girar a la derecha. A futuro tenemos planeado la implementacion de modulo de camara junto a la tarjeta de desarrollo ESP32. La camara la usaremos para detectar los pilares de color verde y rojo, y asi poder esquibarlos.
+¿Qué hace el proyecto?
 
-Le añadimos 3 sensores de sonido a los costados y al frente del carro con piezas fabricadas con PVC, sustituimos el chasis del carro de plastico a uno de aluminio porque el chasis anterior se estaba doblando a medida que el carro se usaba para pruebas, con el nuevo chasis el carro se hizo ligeramente mas largo y le implementamos al carro un pulsador que actue como boton de arranque.
-
+Es un vehículo que cumple las funciones necesarias para realizar el recorrido del reto WRO 2025 en la categoría. Se le ha dotado básicamente de un motor eléctrico (añadir modelo del motor) que suministra la tracción y un servo motor que acoplado a un tren de ruedas nos permite los giros necesarios para moverse libre y automáticamente en la pista. En este momento contamos con una tarjeta Arduino y un puente (añadir las especificaciones del puente H). Nos encontramos en este momento realizando pruebas con el sensor de ultrasonido (añadir el modelo del sensor) Que colocamos en una pieza de PVC  sujeta al chasis de nuestro vehículo. Este chasis fue en principio el de un carro de de plástico que ha sido sustituido por uno de aluminio puesto que el chasis anterior se estaba doblando a medida que el carro se usaba para pruebas. Con el nuevo chasis el carro se hizo ligeramente mas largo y le colocamos un circuito electrónico que controla los movimientos del vehículo.
 
 2.¿Por qué el proyecto es útil?
 
 Es util ya que nos permite participar en la categoria futuros ingenieros en la competencia WRO 2025, tambien nos permite desarrollar nuestras habilidades como ingenieros y programadores.
 
 ¿Cómo comenzaron los usuarios con el proyecto?
-Comenzamos armando las partes principales del carro como las que pueden ser los motores, ruedas, direccionales, plataformas utilizando el kit de robotica que nos proporciono nuestra institucion llamado olibot. Al terminar de ensamblar empezamos una busqueda de componentes que nos puedan ayudar a nuestro carro como los que pueden ser el puente h l298n, sensores de ultrasonido, arduino y un sensor de color TCS3200 que actualmente no estamos usando por las constantes fallas en su deteccion de color. 
+
+Comenzamos armando las partes principales del carro como las que pueden ser los motores, ruedas, direccionales, plataformas utilizando el kit de robotica que nos proporciono nuestra institucion llamado olibot. Al terminar de ensamblar empezamos una busqueda de componentes que nos puedan ayudar a nuestro carro como los que pueden ser el puente h l298n, sensores de ultrasonido, arduino y un sensor de color TCS3200 que actualmente no estamos usando por las constantes fallas en su deteccion de color.
 
 ¿Dónde pueden recibir ayuda los usuarios con el proyecto?
 
@@ -23,6 +22,7 @@ Podemos recibir ayuda de los docentes y personal del colegio U.E.P San Agustin, 
 En el proyecto contribuyen los docentes y estudiantes de U.E.P San Agustin, junto con la ayuda de ciertos representantes profesionales en el area de robotica como por ejemplo, el Padre de Samuel Tua
 
 Aqui abajo se encuentra el código actualizado👇:
+
 
 #include <Servo.h>
 int trigfron=11, echofron=12;
