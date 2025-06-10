@@ -1,1 +1,102 @@
+Aqui abajo se encuentra el código actualizado👇:
+
+
+#include <Servo.h>
+int trigfron=11, echofron=12;
+int trigder=10, echoder=8;
+int trigizq=6, echoizq=7;
+int IN1=2, IN2=4, ENA=3;
+Servo servo;
+long duracionfrontal;
+float distanciafrontal; 
+long duracionderecha;
+float distanciaderecha;
+long duracionizquierda;
+float distanciaizquierda;
+
+void setup() {
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(trigfron, OUTPUT);
+  pinMode(echofron, INPUT);
+  pinMode(trigder, OUTPUT);
+  pinMode(echoder, INPUT);
+  pinMode(trigizq, OUTPUT);
+  pinMode(echoizq, INPUT);
+  servo.attach(9);
+  servo.write(78);
+  Serial.begin(9600);
+
+}
+   //Codigo de testeo para calibrar ultrasonido frontal, que detenga el carro y retroceda si detecta un objeto a una distancia menor o igual a 20cm
+void loop() 
+{
+  analogWrite(ENA, 200); //Velocidad del motor 
+    distanciafrontal = leerUltrasonido(trigfron, echofron);
+    distanciaderecha = leerUltrasonido(trigder, echoder);
+    distanciaizquierda = leerUltrasonido(trigizq, echoizq);
+   
+    Serial.print("Distancia Front:"), Serial.print(distanciafrontal);
+    Serial.print("  Distancia Der:"), Serial.print(distanciaderecha);        //Impresion de las distancias en el monitor serial
+    Serial.print("  Distancia Izq:"), Serial.println(distanciaizquierda);
+    if(distanciafrontal <= 20)
+    {
+     digitalWrite(IN1, LOW);
+     digitalWrite(IN2, HIGH);                     //CONSTANTE ERROR: MOTOR DC REACCIONA SIN QUE SE CUMPLA LA CONDICIONAL, POSEE RETARDOS Y COMPORTAMIENTOS NO ESPERADOS
+                          
+    }else{
+     digitalWrite(IN1, HIGH);
+     digitalWrite(IN2, LOW);
+    }
+  
+  }
+}
+//Funcion del servomotor
+void direccion(int dir)
+{
+  switch(dir)
+  {
+    case 1: //Girar servo hacia la derecha
+    servo.write(113);
+    break;
+    case 0: //Servo ubicado en en centro
+    servo.write(78);
+    break;
+    case -1: /Girar servo hacia la izquierda
+    servo.write(15);
+    break;
+  }
+}
+//Funcion de direccionales del motor dc
+void dirmotor(int sentido)
+{
+  switch(sentido)
+  {
+    case 1: //Motor hacia adelante
+    digitalWrite(IN1, HIGH);  
+    digitalWrite(IN2, LOW);
+    break;
+    
+    case 0: //Motor hacia atras
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);                                                        
+    break;
+                                                                                                            
+    default: //Motor apagado
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+    break;
+  }
+}
+//Funcion de lectura de ultrasonido
+float leerUltrasonido(int trigPin, int echoPin) {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  long duration_us = pulseIn(echoPin, HIGH, 25000);
+  float distanceCm = duration_us * 0.0343 / 2.0;
+  return distanceCm;
+}
 
